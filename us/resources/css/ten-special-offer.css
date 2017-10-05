@@ -1,0 +1,97 @@
+﻿body {
+    margin: 0;
+    font-family: designk-medium;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+img {
+    width: inherit; /* This makes the next two lines work in IE8. */
+    max-width: 100%; /* Add !important if needed. */
+    height: auto; /* Add !important if needed. */
+}
+
+.content-type-rich-text.header {
+    color: #000;
+    border-color: #000;
+    background-color: #e6e6e6;
+}
+
+span.header1 {
+    font-size: 186%;
+    letter-spacing: -.015em;
+    line-height: 100%;
+    margin: 0;
+    text-transform: uppercase;
+    display: block;
+}
+
+span.header2 {
+    font-size: 186%;
+    letter-spacing: -.025em;
+    line-height: 100%;
+    margin: 0;
+    padding-bottom: 20px;
+    display: block;
+}
+
+.col {
+    width: 50%;
+    display: block;
+    float: left;
+}
+
+.content-type-rich-text {
+    letter-spacing: -.02em;
+    line-height: 26px;
+    padding: 40px;
+}
+
+    .content-type-rich-text .header3 {
+        font-size: 108%;
+        font-weight: 700;
+        letter-spacing: -.015em;
+        line-height: 150%;
+        margin: 0;
+        padding-bottom: 15px;
+        text-transform: uppercase;
+        display: block;
+    }
+
+        .content-type-rich-text .header3 a {
+            color: #666;
+            text-decoration: none;
+        }
+
+.dark-background {
+    color: #fff;
+    border-color: #fff;
+    background-color: #000;
+}
+
+.content-type-disclaimer {
+    cursor: pointer;
+    color: #444;
+    padding: 0 40px 40px;
+}
+
+.content-grid {
+    overflow: hidden;
+}
+
+@media (max-width: 480px) {
+    .content-type-rich-text {
+        padding: 16px;
+    }
+}
+
+@media (max-width: 680px) {
+    .content-grid.g50-50 > .col {
+        float: none;
+        width: 100%;
+    }
+
+    .content-type-rich-text.header {
+        padding-top: 80px;
+    }
+}

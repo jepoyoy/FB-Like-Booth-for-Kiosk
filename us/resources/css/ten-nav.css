@@ -1,0 +1,297 @@
+﻿/*body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.428571429;
+    color: #333;
+}
+
+    body*/
+
+.logo-container .logo img {
+    height: 35px;
+    padding-top: 3px;
+}
+
+.kia-header {
+    z-index: 40;
+    border: none;
+    left: 0;
+    right: 0;
+    top: 0;
+    position: fixed;
+    background-color: #fff;
+    -webkit-transition: all .4s ease;
+    -moz-transition: all .4s ease;
+    -o-transition: all .4s ease;
+    transition: all .4s ease;
+    font-family: designk-medium,'Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+
+    .kia-header .mobile-header-main .menu-btn-underlay {
+        position: absolute;
+        top: 0;
+        bottom: 3px;
+        width: 45px;
+        height: 55px;
+        background-color: #333;
+    }
+
+    .kia-header .mobile-menu {
+        top: 58px;
+        position: fixed;
+        z-index: 42;
+        bottom: 0;
+        background-color: #fff;
+        overflow-y: auto;
+        text-transform: uppercase;
+        width: 100%;
+    }
+
+    .kia-header .mobile-header {
+        border: none;
+    }
+
+    .kia-header a, .kia-header a:focus, .kia-header a:hover {
+        color: #000;
+        outline: 0;
+        text-decoration: none;
+        white-space: nowrap;
+    }
+
+    .kia-header .mobile-header .list-links {
+        text-transform: initial;
+    }
+
+        .kia-header .mobile-header .list-links li {
+            list-style: none;
+            margin: .625em 0 0;
+            font-size: .9em;
+        }
+
+    .kia-header .mobile-header .panel {
+        border: none;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+    }
+
+    .kia-header .mobile-header .panel-body {
+        padding-right: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .kia-header .mobile-header .panel-group {
+        margin: 0;
+    }
+
+        .kia-header .mobile-header .panel-group .accordion-root {
+            border-bottom: 1px solid #56555b;
+            -webkit-border-radius: 0;
+            -moz-border-radius: 0;
+            border-radius: 0;
+        }
+
+
+
+    .kia-header .hamburger-menu {
+        display: block;
+        position: relative;
+        overflow: hidden;
+        margin: 10px 0 0 -8px;
+        padding: 0;
+        width: 28px;
+        height: 18px;
+        font-size: 0;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+        -webkit-border-radius: initial;
+        -moz-border-radius: initial;
+        border-radius: initial;
+        border: none;
+        cursor: pointer;
+        background: 0 0;
+    }
+
+        .kia-header .hamburger-menu:focus {
+            outline: 0;
+        }
+
+        .kia-header .hamburger-menu span {
+            display: block;
+            position: absolute;
+            top: 8px;
+            left: 2px;
+            right: 2px;
+            height: 2px;
+            background: #fff;
+            -webkit-transition: background 0s .2s;
+            -o-transition: background 0s .2s;
+            -moz-transition: background 0s .2s;
+            transition: background 0s .2s;
+        }
+
+            .kia-header .hamburger-menu span::after, .kia-header .hamburger-menu span::before {
+                position: absolute;
+                display: block;
+                left: 0;
+                width: 100%;
+                height: 2px;
+                background: #fff;
+                content: "";
+                -webkit-transition-duration: .2s,.2s,0s;
+                -moz-transition-duration: .2s,.2s,0s;
+                -o-transition-duration: .2s,.2s,0s;
+                transition-duration: .2s,.2s,0s;
+                -webkit-transition-delay: .2s,0s,.2s;
+                -moz-transition-delay: .2s,0s,.2s;
+                -o-transition-delay: .2s,0s,.2s;
+                transition-delay: .2s,0s,.2s;
+            }
+
+            .kia-header .hamburger-menu span::before {
+                top: -6px;
+                -webkit-transition-property: top,-webkit-transform,background-color;
+                -moz-transition-property: top,-moz-transform,background-color;
+                -o-transition-property: top,-o-transform,background-color;
+                transition-property: top,transform,background-color;
+            }
+
+            .kia-header .hamburger-menu span::after {
+                bottom: -6px;
+                -webkit-transition-property: bottom,-webkit-transform,background-color;
+                -moz-transition-property: bottom,-moz-transform,background-color;
+                -o-transition-property: bottom,-o-transform,background-color;
+                transition-property: bottom,transform,background-color;
+            }
+
+        .kia-header .hamburger-menu.active span {
+            background: 0 0;
+        }
+
+            .kia-header .hamburger-menu.active span::after, .kia-header .hamburger-menu.active span::before {
+                -webkit-transition-delay: 0s,.2s,.2s;
+                -moz-transition-delay: 0s,.2s,.2s;
+                -o-transition-delay: 0s,.2s,.2s;
+                transition-delay: 0s,.2s,.2s;
+                background-color: #c4172c;
+            }
+
+            .kia-header .hamburger-menu.active span::before {
+                top: 0;
+                -webkit-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                -o-transform: rotate(45deg);
+                -moz-transform: rotate(45deg);
+                transform: rotate(45deg);
+            }
+
+            .kia-header .hamburger-menu.active span::after {
+                bottom: 0;
+                -webkit-transform: rotate(-45deg);
+                -ms-transform: rotate(-45deg);
+                -o-transform: rotate(-45deg);
+                -moz-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+            }
+
+    .bnp-progress-container .kia-header .mobile-header span.group-heading.bnp-progress-list-item:not(.is-open):before, .bnp-progress-container .kia-header .mobile-header span.group-heading.is-open.bnp-progress-list-item:before, .bnp-progress-container .kia-header .mobile-header span.link.bnp-progress-list-item:before, .kia-header .mobile-header .bnp-progress-container span.group-heading.bnp-progress-list-item:not(.is-open):before, .kia-header .mobile-header .bnp-progress-container span.group-heading.is-open.bnp-progress-list-item:before, .kia-header .mobile-header .bnp-progress-container span.link.bnp-progress-list-item:before, .kia-header .mobile-header span.group-heading.is-open:after, .kia-header .mobile-header span.group-heading:not(.is-open):after, .kia-header .mobile-header span.link:after {
+        float: right;
+        font-family: kia-icons;
+        margin-right: 10px;
+    }
+
+
+
+    .kia-header .mobile-header-main h1 {
+        margin: 0;
+        line-height: 0;
+    }
+
+    .bnp-progress-container .kia-header .mobile-header-main.bnp-progress-list-item:before, .kia-header .bnp-progress-container .mobile-header-main.bnp-progress-list-item:before, .kia-header .mobile-header-main:after {
+        border-bottom: 3px solid #c4172c;
+        width: 100%;
+        padding-top: 10px;
+    }
+
+    .kia-header .mobile-header-main:before {
+        padding-top: 10px;
+    }
+
+    .kia-header #menu-footer {
+        background-color: #000;
+        text-transform: initial;
+    }
+
+        .kia-header #menu-footer .row, .kia-header #menu-footer.row {
+            margin-left: -15px;
+            margin-right: -15px;
+        }
+
+            .kia-header #menu-footer .row .col-xs-12, .kia-header #menu-footer .row .col-xs-6, .kia-header #menu-footer.row .col-xs-12, .kia-header #menu-footer.row .col-xs-6 {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+
+        .kia-header #menu-footer a {
+            color: #fff;
+        }
+
+        .kia-header #menu-footer .l1-items-list, .kia-header #menu-footer .list-inline, .kia-header #menu-footer .utility-items-list {
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+            .kia-header #menu-footer .l1-items-list li, .kia-header #menu-footer .list-inline li, .kia-header #menu-footer .utility-items-list li {
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+
+    .kia-header .find-dealers-link {
+        margin-top: 9px;
+        margin-right: -10px;
+        padding-right: 7px;
+        padding-left: 7px;
+    }
+
+.panel-title {
+    margin-top: 0;
+    font-size: 1pc;
+}
+
+/*.modal-close-btn {
+    display: none;
+}*/
+
+.modal-close-btn {
+    display: block;
+}
+
+    .modal-close-btn a {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        z-index: 2;
+        color: #333;
+    }
+
+        .modal-close-btn a:hover {
+            text-decoration: none;
+            color: #c4172c;
+        }
+
+/*.footer-brand .footer-logo-container .footer-tag, .kia-header {
+    font-family: designk-medium,'Helvetica Neue',Helvetica,Arial,sans-serif;
+}*/
+
+/*----------------------------------
+    Icon Styles
+----------------------------------*/
+
+.icon_map-marker:before {
+    content: "\f116";
+}

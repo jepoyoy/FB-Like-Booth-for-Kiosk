@@ -1,0 +1,293 @@
+.carousel-container .slick>button.slick-prev:before {
+    content: "\f10a";
+}
+
+.carousel-container .slick>button.slick-next:before {
+    content: "\f10b";
+}
+
+.carousel-container.hero-container .slick>button.slick-next,
+.carousel-container.vehicle-container .slick>button.slick-next {
+    right: 0;
+}
+
+.carousel-container .slick .slick-list,
+.carousel-container .slick .slick-track {
+    height: 100%;
+}
+
+.carousel-container .slick .slick-list .carousel-slide-bgimage,
+.carousel-container .slick .slick-track .carousel-slide-bgimage {
+    display: block;
+}
+
+.carousel-container .slick>button:before {
+    display: block;
+    font-family: kia-icons;
+}
+
+.carousel-container.vehicle-container .slick-padder,
+.carousel-container.vehicle-container .slick {
+    height: 9.5em;
+    padding: 0 1.7857142857em;
+    margin-bottom: 10px;
+}
+
+#vehicle-category div span:hover {
+    cursor: pointer;
+}
+@media only screen and (min-width: 768px) and (max-width:1023px) {
+    .carousel-container.vehicle-container .slick-padder,
+    .carousel-container.vehicle-container .slick {
+        height:140px;
+        padding: 0 3.2857142857em
+    };
+}
+
+@media only screen and (min-width: 1024px) {
+    .carousel-container.vehicle-container .slick-padder,
+    .carousel-container.vehicle-container .slick {
+        height:165px;
+        padding: 0 5.1428571429em
+    };
+}
+
+.carousel-container.vehicle-container .slick-padder .slick-track,
+.carousel-container.vehicle-container .slick .slick-track {
+    margin: 0 auto;
+}
+
+.carousel-container.vehicle-container .slick .slick-list .carousel-slide-bgimage {
+    height: 100%;
+    text-align: center;
+    color: #000;
+    font-family: designk-medium, 'Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-size: .8em;
+    line-height: 1.5em;
+}
+
+@media screen and (min-width: 768px) {
+    .carousel-container.vehicle-container .slick .slick-list .carousel-slide-bgimage {
+        font-size:1em
+    };
+}
+
+.carousel-container.vehicle-container .slick .slick-list .carousel-slide-bgimage a:focus,
+.carousel-container.vehicle-container .slick .slick-list .carousel-slide-bgimage a:hover,
+.carousel-container.vehicle-container .slick .slick-list .carousel-slide-bgimage:focus,
+.carousel-container.vehicle-container .slick .slick-list .carousel-slide-bgimage:hover {
+    text-decoration: none;
+    outline: 0;
+}
+
+.carousel-container.vehicle-container .slick .slick-list .carousel-slide-bgimage img {
+    margin: 0 auto -2.5em;
+    height: 72%;
+    width: auto;
+}
+
+@media only screen and (min-width: 1024px) {
+    .carousel-container.vehicle-container .slick .slick-list .carousel-slide-bgimage img {
+        height:69%
+    }
+}
+
+.carousel-container.vehicle-container .slick .slick-list .carousel-slide-bgimage .slide-vehicle-description {
+    line-height: 1.2em;
+    padding-top: 22px;
+}
+
+.carousel-container.vehicle-container .slick .slick-list .carousel-slide-bgimage .slide-vehicle-description .title {
+    font-size: 1.2em;
+    font-family: designk-medium,'Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+
+@media screen and (min-width: 768px) {
+    .carousel-container.vehicle-container .slick .slick-list .carousel-slide-bgimage .slide-vehicle-description .title {
+        font-size:1em
+    };
+}
+
+.carousel-container.vehicle-container .slick .slick-list .carousel-slide-bgimage .slide-vehicle-description .coming-soon {
+    padding-top: 5px;
+}
+
+.carousel-container.vehicle-container .slick .slick-list .carousel-slide-bgimage .slide-vehicle-description .coming-soon,
+.carousel-container.vehicle-container .slick .slick-list .carousel-slide-bgimage .slide-vehicle-description .price {
+    /*font-size: 1.1em;*/
+}
+
+.carousel-container.vehicle-container .slick .slick-list .carousel-slide-bgimage .slide-vehicle-description .mpg-label,
+.carousel-container.vehicle-container .slick .slick-list .carousel-slide-bgimage .slide-vehicle-description .msrp-label {
+    /*font-size: 1em;
+    font-family: designk-light,'Helvetica Neue',Helvetica,Arial,sans-serif;*/
+}
+
+@media screen and (min-width: 768px) {
+    .carousel-container.vehicle-container .slick .slick-list .carousel-slide-bgimage .slide-vehicle-description .coming-soon,
+    .carousel-container.vehicle-container .slick .slick-list .carousel-slide-bgimage .slide-vehicle-description .price {
+        /*font-size: 1em;*/
+    }
+
+    .carousel-container.vehicle-container .slick .slick-list .carousel-slide-bgimage .slide-vehicle-description .mpg-label,
+    .carousel-container.vehicle-container .slick .slick-list .carousel-slide-bgimage .slide-vehicle-description .msrp-label {
+        /*font-size: 1em;*/
+    }
+}
+
+.carousel-container.vehicle-container .slick-padder>button,
+.carousel-container.vehicle-container .slick>button {
+    background-color: transparent;
+}
+
+.carousel-container.vehicle-container .slick>button.slick-next,
+.carousel-container.vehicle-container .slick>button.slick-prev {
+    top: 0;
+    width: 3rem;
+    height: 100%;
+    margin-top: 0;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+    transform: none;
+    font-style: normal;
+    font-size: 0;
+}
+
+@media only screen and (min-width: 768px) and (max-width:1023px) {
+    .carousel-container.vehicle-container .slick>button.slick-next,
+    .carousel-container.vehicle-container .slick>button.slick-prev {
+            width:6rem;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .carousel-container.vehicle-container .slick>button.slick-next,
+    .carousel-container.vehicle-container .slick>button.slick-prev {
+        width:7rem;
+    }
+}
+
+.carousel-container.vehicle-container .slick>button.slick-next.slick-disabled,
+.carousel-container.vehicle-container .slick>button.slick-prev.slick-disabled {
+    display: none!important;
+}
+
+.carousel-container.vehicle-container .slick>button.slick-next:before,
+.carousel-container.vehicle-container .slick>button.slick-prev:before {
+    color: #8a8a8a;
+    font-size: 2rem;
+}
+
+.carousel-container.vehicle-container .slick>button.slick-next:after,
+.carousel-container.vehicle-container .slick>button.slick-prev:after {
+    color: #000;
+    font-size: 8pt;
+    position: absolute;
+    bottom: 2em;
+    right: 0;
+    line-height: normal;
+    font-family: designk-bold, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.carousel-container.vehicle-container .slick>button.slick-prev {
+    left: 0;
+}
+
+.carousel-container.vehicle-container .slick.jellybean-carousel {
+    position: absolute;
+    width: 100%;
+    visibility: hidden;
+}
+
+.carousel-container.vehicle-container .slick.jellybean-carousel.slick-inactive .slick-track {
+    /*width: 100%!important;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -moz-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;*/
+}
+
+.carousel-container.vehicle-container .slick.jellybean-carousel.slick-inactive .slick-slide {
+    /*float: none;;*/
+}
+
+.carousel-container.vehicle-container .slick.jellybean-carousel.slick-active,
+.carousel-container.vehicle-container .slick.jellybean-carousel.slick-inactive {
+    visibility: visible;
+}
+
+.carousel-container.vehicle-container .slick.jellybean-control {
+    height: 2.5em;
+    margin: 1em auto -1em;
+    position: relative;
+    z-index: 10;
+}
+
+.carousel-container.vehicle-container .slick.jellybean-control .slick-slide {
+    text-align: center;
+    font-size: 12pt;
+    line-height: 2em;
+    outline: 0;
+}
+
+.carousel-container.vehicle-container .slick.jellybean-control .slick-slide span {
+    color: #000;
+    font-family: designk-bold, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    outline: 0;
+}
+
+@media screen and (min-width: 768px) {
+    .carousel-container.vehicle-container .slick.jellybean-control {
+        margin:1em auto
+    }
+
+    .carousel-container.vehicle-container .slick.jellybean-control .slick-track {
+        width: 100%!important;
+        text-align: center
+    }
+
+    .carousel-container.vehicle-container .slick.jellybean-control .slick-slide {
+        float: none;
+        display: inline;
+        line-height: inherit;
+        border-right: 1px solid #999
+    }
+
+    .carousel-container.vehicle-container .slick.jellybean-control .slick-slide:last-child {
+        border-right: 0 none
+    }
+
+    .carousel-container.vehicle-container .slick.jellybean-control .slick-slide span {
+        padding: 10px 15px;
+        font-family: designk-medium, 'Helvetica Neue', Helvetica, Arial, sans-serif
+    }
+
+    .carousel-container.vehicle-container .slick.jellybean-control .slick-slide.slick-current span {
+        color: #c4172c;
+        border-bottom: 4px solid #c4172c
+    };
+}
+
+@media only screen and (min-width: 1024px) {
+    .carousel-container.vehicle-container .slick.jellybean-control .slick-slide span {
+        margin:0 15px
+    };
+}
+
+.carousel-container.vehicle-container .slick.jellybean-control .slick-slide a:focus,
+.carousel-container.vehicle-container .slick.jellybean-control .slick-slide a:hover {
+    text-decoration: none;
+    outline: 0;
+}
+
+.carousel-container.vehicle-container .slick.vehicle-list {
+    display: none;
+}

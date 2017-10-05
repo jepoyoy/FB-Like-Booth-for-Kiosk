@@ -1,0 +1,231 @@
+﻿
+
+.car-wrapper {
+    display: block;
+    float: left;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    width: 16vw;
+    min-width: 220px;
+    max-width: 250px; 
+    font-size: small;
+}
+
+.vehicle-types {
+    width:85%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    clear: both;
+}
+
+    span.ic-accordion {
+        display: none;
+    }
+.car-wrapper h2 {
+    display: none;
+    font-size:x-large;
+    font-weight: bold;
+    padding-top: 0;
+}
+
+h1 {
+    font-size:xx-large;
+    width: 90%;
+    margin-left:auto;
+    margin-right:auto;
+}
+ h2 {
+    padding-top: 20px;
+}
+     h2.title-large {
+        display:inline-block;
+        width: 100%;
+        font-size:medium;
+     }
+
+
+ .build-detail {
+     line-height: 185%;
+     
+ }
+.build-buttons-long button {
+    background: #fff;
+    border: 1px solid #000;
+    padding: 5px 12px 5px 12px;
+    font-size: 1.2em;
+    margin-right:10px;
+    width: 85%!important;
+    white-space: nowrap;
+}
+
+.build-buttons-long button:hover {
+    background: #bb0a0a;
+    color: #fff;
+}
+
+.build-buttons-long button::after {
+    clear:right;
+}
+
+.build-buttons button {
+    background: #fff;
+    border: 1px solid #000;
+    padding: 5px 12px 5px 12px;
+    font-size: 1.2em;
+    margin-right:10px;
+    width: 40%;
+    white-space: nowrap;
+}
+
+.build-buttons button:hover {
+    background: #bb0a0a;
+    color: #fff;
+}
+
+.build-buttons button::after {
+    clear:right;
+}
+
+.build-detail span.bold-text:before, span.msrp-text:before {
+    content: '\A';
+    white-space: pre;
+}
+
+.build-detail a, .build-detail a:link, .build-detail a:hover, .build-detail a:visited {
+    color: #333333;
+    text-decoration: underline;
+}
+
+.build-detail a.selected, .build-detail a.selected:link, .build-detail a.selected:hover, .build-detail a.selected:visited {
+    color: #bb0a0a;
+    text-decoration: none;
+}
+
+.bold-text {
+    font-weight: bold;
+}
+.msrp-text {
+    clear: left;
+}
+.build-image {
+    width: 238px;
+    height: 100px;
+    overflow:hidden;
+}
+.build-image img {
+    width: 170px;
+}
+
+.sticky {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  border-top: 0;
+}
+
+.l2-navigation-container .l2-ul-container li a:hover {
+    text-decoration: underline;
+}
+@media screen and (max-width:767px) {
+    .header-container {
+        padding-bottom: 50px;
+    }
+    h1 {
+        font-size: 24px;
+        margin: 20px 5px 5px 20px;
+        color: #000;
+        font-family: designk-medium;
+    }
+    .car-wrapper {
+        width: 50%;
+    }
+    .l2-ul-container {
+        border-bottom: 1px solid #000;
+    }
+    .build-detail {
+            width: 90%;
+      }
+    h2.vehicle-cat {
+        margin-top: 40px;
+    }
+
+    /*
+    .panel-title span.link:after {
+        content: "\e080";
+        color: #bb0a0a;
+        float: right;
+    }
+        */
+}
+
+@media screen and (max-width:480px) {
+    .header-container {
+        padding-bottom: 90px;
+    }
+
+
+    .car-wrapper h2 {
+       display:inline-block;
+       width:100%;
+       clear:right;
+    }
+    .car-wrapper {
+        width: 100%;
+        border-bottom: 1px solid #ccc;
+    }
+
+.build-image {
+    width: 120px;
+    height: 65px;
+    margin-top: 20px;
+    display: block;
+    float: left;
+    overflow: hidden;
+}
+    .build-image img {
+        width: 120px;
+    }
+
+    .build-detail {
+        display: block;
+        float: left;
+        margin-left: 25px;
+        margin-top: 20px;
+        width: auto;
+    }
+
+    .build-buttons {
+        display:block;
+        float:left;
+        width: 100vw;
+    }
+
+    .build-buttons button {
+        width: 40vw;
+    }
+    h2.vehicle-cat {
+        height: 45px;
+        border-top: 1px solid #56555b;
+        border-bottom: 1px solid #56555b;
+        color: #bb0a0a;
+        background:#e6e6e6;
+        font-size: 18px;
+        font-family: designk-medium;
+        padding: 10px 20px;
+        margin: 0 -20px;
+        cursor: pointer;
+    }
+
+    span.ic-accordion {
+        float: right;
+        margin-right: 10px;
+        display: block;
+    }
+
+    h2.title-large {
+        display: none;
+    }
+}
