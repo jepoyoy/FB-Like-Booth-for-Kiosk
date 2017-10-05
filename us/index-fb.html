@@ -22,6 +22,7 @@
     <meta charset="UTF-8" />
     <meta property="og:url" content="http://www.kiakorean.com/us/kr/" />
     <meta property="og:image" content="http://www.kiakorean.com/us/k4/images/kia-logo.png" /> 
+
     <link href="/us/resources/js/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="/us/resources/js/slick/slick.css" rel="stylesheet" />
     <link href="/us/resources/fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
@@ -41,7 +42,6 @@
     <script src="/us/resources/js/picturefill/dist/picturefill.min.js"></script>
     <script src="/us/resources/js/slick/slick.min.js"></script>
     <script src="/us/resources/js/bootbox/bootbox.js"></script>
-   
     <script src="/us/resources/js/kiakorean-general.js"></script>
     <script src="/us/resources/js/kiakorean-home.js"></script>
 
@@ -119,41 +119,14 @@ fbq('track', 'PageView');
                                     <div id="id-specialevent" style="width:100%;background:#3b5998;">
                                         <a href="https://www.facebook.com/KiaKoreanAmerican" class="top tile" target="_blank" tabindex="-1">
                                             <picture picturefill="">
-                                                <source media="(min-width: 1024px)" pf-media="(min-width: 1024px)" srcset="/us/k4/images/homepage/promo/non-vehicles/Primary-Promo1/homepage_korean_fbp_open_v1--tpromodk.jpg">
-                                                <source media="(min-width: 768px)" pf-media="(min-width: 768px)" srcset="/us/k4/images/homepage/promo/non-vehicles/Primary-Promo1/homepage_korean_fbp_open_v1--tpromotab.jpg 1x, /us/k4/images/homepage/promo/non-vehicles/Primary-Promo1/homepage_korean_fbp_open_v1--tpromotabxd.jpg 2x">
-                                                <source media="(max-width: 767px)" pf-media="(max-width: 767px)" srcset="/us/k4/images/homepage/promo/non-vehicles/Primary-Promo1/homepage_korean_fbp_open_v1--tpromomob.jpg 1x, /us/k4/images/homepage/promo/non-vehicles/Primary-Promo1/homepage_korean_fbp_open_v1--tpromomobxd.jpg 2x">
-                                                <img src="/us/k4/images/homepage/promo/non-vehicles/Primary-Promo1/homepage_korean_fbp_open_v1--tpromodk.jpg">
+                                                asdasd
                                             </picture>
                                         </a>
                                     </div>
                                 </div>
-                                <div class="fb-bottom" style="display:block;width:100%;height:520px;overflow-y: scroll;">
-                                    <div class="container-fluid" data-bind="foreach: instFBFeedModel.feed">
-                                      <div class="row card" style="padding:5px;">
-                                              <div class="col-md-4" data-bind="style: { backgroundImage: 'url(\'' + photo + '\')', backgroundSize: 'cover', height: '150px' }" alt="Avatar">
-                                              &nbsp;
-                                              </div>
-                                            
-                                              <div class="col-md-8" style="padding:5px;height:150px">
-                                                <p style="margin: 0;height: 75%" data-bind="text: trunc"></p> <br/>
-                                                <div>
-                                                <span data-bind="text: likes.summary.total_count"></span>
-                                                <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
-                                                &nbsp;&nbsp;
-                                                <span data-bind="text: shares.count"></span>
-                                                <span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span>
-                                                &nbsp;&nbsp;
-                                                <a style="height: 20%" data-bind="attr: {href: link}">
-                                                    <span data-bind="text: type_link_name"></span>
-                                                </a>
-                                                &nbsp;<!--<span data-bind="text: type"></span>-->
-                                                </div>
-                                              </div>
-                                      </div>
-                                    </div>
+                                <div class="fb-bottom" style="display:block;float:left;width:100%;">
+                                   
                                 </div>
-
-
 
                         </div>
                     </div>
@@ -872,7 +845,5 @@ $('#id-summerevent').click(function () {
 //}
     </script>
 
-     <script src="/us/resources/js/knockoutjs/knockout.js"></script>
-    <script src="/us/resources/js/kiakorean-fb-slider-feed.js"></script>
         </body>
 </html>
