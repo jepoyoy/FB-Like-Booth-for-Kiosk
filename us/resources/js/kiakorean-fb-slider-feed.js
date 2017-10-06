@@ -5,7 +5,12 @@ var FbFeedModel = function() {
     this.latestDate = 0;
     this.fadeIn = function(domNode, index, element) {
             if (domNode.nodeType === 1){
-            	$(domNode).hide().slideDown();
+            	$(domNode).hide().css('opacity', 0)
+								  .slideDown('slow')
+								  .animate(
+								    { opacity: 1 },
+								    { queue: false, duration: 'slow' }
+								  );
             }
         }
 };
@@ -14,10 +19,12 @@ function updateEntry(entry){
 
 	entry.photo = "https://graph.facebook.com/"+entry.object_id+"/picture?type=normal";
 
-	if (entry.message.length > 100){
-	   entry.trunc = entry.message.substring(0,100)+'...';
+	var msg = (entry.message ? entry.message : entry.story);
+
+	if (msg.length > 100){
+	   entry.trunc = msg.substring(0,100)+'...';
 	}else{
-		entry.trunc = entry.message;
+		entry.trunc = msg;
 	}
 
 	if(!entry.shares){
@@ -41,14 +48,14 @@ var instFBFeedModel = new FbFeedModel();
 ko.applyBindings(instFBFeedModel);
 
 
-$.get("https://graph.facebook.com/277057641177/feed?limit=5&fields=created_time,message,story,id,shares,likes.limit(0).summary(true),link,type,message_tags,attachments,status_type,object_id&access_token=1084796521630695%7CXA-8-k2H2F3U6lJHjkjt1m-RgEg", function(result){
+$.get("https://graph.facebook.com/277595262589101/feed?limit=5&fields=created_time,message,story,id,shares,likes.limit(0).summary(true),link,type,message_tags,attachments,status_type,object_id&access_token=1084796521630695%7CXA-8-k2H2F3U6lJHjkjt1m-RgEg", function(result){
 	var first = true;
 
 	result.data.forEach(function(entry) {
 
 		if(first){
 			first=false;
-			instFBFeedModel.latestDate = (new Date(entry.created_time).getTime()/1000) -1;
+			instFBFeedModel.latestDate = (new Date(entry.created_time).getTime()/1000) -100000;
 		}
 
 	    instFBFeedModel.feed.push(updateEntry(entry));
@@ -63,14 +70,14 @@ $('.carousel-hero').on('afterChange', function(event, slick, currentSlide, nextS
 
   	prevSlide = currentSlide;
   	
-  	$.get("https://graph.facebook.com/277057641177/feed?since="+instFBFeedModel.latestDate+"&limit=5&fields=created_time,message,story,id,shares,likes.limit(0).summary(true),link,type,message_tags,attachments,status_type,object_id&access_token=1084796521630695%7CXA-8-k2H2F3U6lJHjkjt1m-RgEg", function(result){
+  	$.get("https://graph.facebook.com/277595262589101/feed?since="+instFBFeedModel.latestDate+"&limit=5&fields=created_time,message,story,id,shares,likes.limit(0).summary(true),link,type,message_tags,attachments,status_type,object_id&access_token=1084796521630695%7CXA-8-k2H2F3U6lJHjkjt1m-RgEg", function(result){
 		var first = true;
 
 		result.data.forEach(function(entry) {
 
 			if(first){
 				first=false;
-				instFBFeedModel.latestDate = (new Date(entry.created_time).getTime()/1000 ) -1;
+				instFBFeedModel.latestDate = (new Date(entry.created_time).getTime()/1000 ) -100000;
 			}
 
 			instFBFeedModel.feed.pop();
