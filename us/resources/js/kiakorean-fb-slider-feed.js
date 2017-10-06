@@ -55,9 +55,11 @@ $.get("https://graph.facebook.com/277057641177/feed?limit=5&fields=created_time,
 	});
 })
 
+var prevSlide = 0;
 
 $('.carousel-hero').on('afterChange', function(event, slick, currentSlide, nextSlide){
-  if(currentSlide == SLIDE_WITH_FB_PLUGIN){
+
+  if(prevSlide != currentSlide && currentSlide == SLIDE_WITH_FB_PLUGIN){
 
   	$.get("https://graph.facebook.com/277057641177/feed?since="+instFBFeedModel.latestDate+"&limit=5&fields=created_time,message,story,id,shares,likes.limit(0).summary(true),link,type,message_tags,attachments,status_type,object_id&access_token=1084796521630695%7CXA-8-k2H2F3U6lJHjkjt1m-RgEg", function(result){
 		var first = true;
@@ -74,5 +76,7 @@ $('.carousel-hero').on('afterChange', function(event, slick, currentSlide, nextS
 		});
 	})
 
+  }else{
+  	prevSlide = currentSlide;
   }
 });
