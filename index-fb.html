@@ -128,13 +128,13 @@ fbq('track', 'PageView');
                                     </div>
                                 </div>
                                 <div class="fb-bottom" style="display:block;width:100%;height:520px;overflow-y: scroll;">
-                                    <div class="container-fluid" data-bind="foreach: instFBFeedModel.feed">
+                                    <div class="container-fluid" data-bind="foreach: {data: instFBFeedModel.feed, afterAdd: instFBFeedModel.fadeIn }">
                                       <div class="row card" style="padding:5px;">
-                                              <div class="col-md-4" data-bind="style: { backgroundImage: 'url(\'' + photo + '\')', backgroundSize: 'cover', height: '150px' }" alt="Avatar">
+                                              <div class="col-md-4 col-sm-4 col-xs-4" data-bind="style: { backgroundImage: 'url(\'' + photo + '\')', backgroundSize: 'cover', height: '150px' }" alt="Avatar">
                                               &nbsp;
                                               </div>
                                             
-                                              <div class="col-md-8" style="padding:5px;height:150px">
+                                              <div class="col-md-8 col-sm-8 col-xs-8" style="padding:5px;height:150px">
                                                 <p style="margin: 0;height: 75%" data-bind="text: trunc"></p> <br/>
                                                 <div>
                                                 <span data-bind="text: likes.summary.total_count"></span>
@@ -873,6 +873,6 @@ $('#id-summerevent').click(function () {
     </script>
 
      <script src="/us/resources/js/knockoutjs/knockout.js"></script>
-    <script src="/us/resources/js/kiakorean-fb-slider-feed.js"></script>
+    <script src="/us/resources/js/kiakorean-fb-slider-feed.js?v102"></script>
         </body>
 </html>
