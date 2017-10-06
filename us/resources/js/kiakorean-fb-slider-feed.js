@@ -55,7 +55,7 @@ $.get("https://graph.facebook.com/277595262589101/feed?limit=5&fields=created_ti
 
 		if(first){
 			first=false;
-			instFBFeedModel.latestDate = (new Date(entry.created_time).getTime()/1000) -100000;
+			instFBFeedModel.latestDate = (new Date(entry.created_time).getTime()/1000);
 		}
 
 	    instFBFeedModel.feed.push(updateEntry(entry));
@@ -65,25 +65,31 @@ $.get("https://graph.facebook.com/277595262589101/feed?limit=5&fields=created_ti
 var prevSlide = 0;
 
 $('.carousel-hero').on('afterChange', function(event, slick, currentSlide, nextSlide){
+  var first = true;
 
   if(prevSlide != currentSlide && currentSlide == SLIDE_WITH_FB_PLUGIN){
 
   	prevSlide = currentSlide;
   	
   	$.get("https://graph.facebook.com/277595262589101/feed?since="+instFBFeedModel.latestDate+"&limit=5&fields=created_time,message,story,id,shares,likes.limit(0).summary(true),link,type,message_tags,attachments,status_type,object_id&access_token=1084796521630695%7CXA-8-k2H2F3U6lJHjkjt1m-RgEg", function(result){
-		var first = true;
+		
 
 		result.data.forEach(function(entry) {
 
 			if(first){
 				first=false;
-				instFBFeedModel.latestDate = (new Date(entry.created_time).getTime()/1000 ) -100000;
+				instFBFeedModel.latestDate = (new Date(entry.created_time).getTime()/1000 );
 			}
 
-			instFBFeedModel.feed.pop();
+			var toTop = instFBFeedModel.feed.pop();
 		    instFBFeedModel.feed.unshift(updateEntry(entry));
 		});
 	})
+
+	if(first){ //cycle bottom to top
+		var toTop = instFBFeedModel.feed.pop();
+		instFBFeedModel.feed.unshift(updateEntry(toTop));
+	}
 
   }else{
   	prevSlide = currentSlide;
