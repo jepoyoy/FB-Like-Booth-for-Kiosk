@@ -1,10 +1,11 @@
 var SLIDE_WITH_FB_PLUGIN = 0; //change if needed
+var ANIMATE_TOGGLE = false;
 
 var FbFeedModel = function() {
     this.feed = ko.observableArray();
     this.latestDate = 0;
     this.fadeIn = function(domNode, index, element) {
-            if (domNode.nodeType === 1){
+            if (domNode.nodeType === 1 && ANIMATE_TOGGLE){
             	$(domNode).hide().fadeIn({
                     duration: 2000,
                     easing: "easeInQuad"
@@ -58,6 +59,8 @@ $.get("https://graph.facebook.com/277595262589101/feed?limit=5&fields=created_ti
 
 	    instFBFeedModel.feed.push(updateEntry(entry));
 	});
+
+	ANIMATE_TOGGLE = true;
 })
 
 var prevSlide = 0;
