@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+</head>
+<body>
+<div id="fb-root"></div>
+<script>
+window.fbAsyncInit = function() {
+    FB.init({
+      appId            : '1084796521630695',
+      autoLogAppEvents : true,
+      xfbml            : true,
+      version          : 'v2.10'
+    });
+    FB.AppEvents.logPageView();
+    FB.getLoginStatus(function(response) {
+        statusChangeCallback(response);
+    });
+
+    var page_like_or_unlike_callback = function(url, html_element) {
+        console.log("page_like_or_unlike_callback");
+        console.log(url);
+        console.log(html_element);
+      }
+
+      // In your onload handler
+      FB.Event.subscribe('edge.create', page_like_or_unlike_callback);
+      FB.Event.subscribe('edge.remove', page_like_or_unlike_callback);
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+<div class="fb-page" data-href="https://web.facebook.com/kiainthephilippines/" data-width="500" data-height="500" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"></div>
+</body>
+</html>

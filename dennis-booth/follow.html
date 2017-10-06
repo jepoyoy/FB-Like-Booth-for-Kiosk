@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+
+    <title>Kia Booth Page Liker v1</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="https://getbootstrap.com/docs/4.0/examples/sticky-footer/sticky-footer.css" rel="stylesheet">
+    <link rel="stylesheet" href="booth.css"/>
+  </head>
+
+  <body>
+  <div id="fb-root"></div>
+	<script>
+	window.fbAsyncInit = function() {
+	    FB.init({
+	      appId            : '1084796521630695',
+	      autoLogAppEvents : true,
+	      xfbml            : true,
+	      version          : 'v2.10'
+	    });
+	  };
+
+	  (function(d, s, id){
+	     var js, fjs = d.getElementsByTagName(s)[0];
+	     if (d.getElementById(id)) {return;}
+	     js = d.createElement(s); js.id = id;
+	     js.src = "//connect.facebook.net/en_US/sdk.js";
+	     fjs.parentNode.insertBefore(js, fjs);
+	   }(document, 'script', 'facebook-jssdk'));
+
+	function step1(){
+
+	    FB.login(function(response) {
+	      if (response.authResponse) {
+	       console.log('Welcome!  Fetching your information.... ');
+	       FB.api('/me', function(response) {
+	         console.log('Good to see you, ' + response.name + '.');
+
+	         $("#login").hide();
+	         $("#login-success").show();
+	         $("#logout").html("Log out " + response.name );
+	         $("#logout").addClass("btn-success");
+	         $("#logout").removeAttr("disabled");
+	         $("#overlay").fadeOut();
+
+	       });
+	      } else {
+	       console.log('User cancelled login or did not fully authorize.');
+	      }
+	  });
+	}
+
+	function step2(){
+
+	    FB.logout(function(response) {
+	      console.log("logged out")
+	      location.reload();
+	  });
+	}
+	</script>
+
+	<div style="clear:both">&nbsp;</div>
+	<div style="clear:both">&nbsp;</div>
+	<div style="clear:both">&nbsp;</div>
+	<div style="clear:both">&nbsp;</div>
+    <!-- Begin page content -->
+    <div class="container">
+      	
+      	<div class="panel panel-default">
+		  <div class="panel-heading">
+		    <h3 class="panel-title">Step 1 : Login using Facebook</h3>
+		  </div>
+		  <div class="panel-body">
+		    <button id="login" onclick="javascript:step1()" class="loginBtn btn-lg loginBtn--facebook">
+		    Login with Facebook
+		  </button>
+		  <div id="login-success" style="display:none" class="alert alert-success" role="alert">
+			  Logged in Successfully!
+			</div>
+		  </div>
+		</div>
+
+		<div style="clear:both">&nbsp;</div>
+
+		<div class="panel panel-default">
+		  <div class="panel-heading">
+		    <h3 class="panel-title">Step 2 : Like our page</h3>
+		  </div>
+		  <div class="panel-body">
+
+		  	<div id="wrap">
+		    <div id="overlay" class="disabled-overlay">&nbsp;</div>
+		    <div style="height:150px" class="fb-page" data-href="https://web.facebook.com/kiainthephilippines/" data-width="500" data-height="500" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"></div>
+		    </div>
+		  </div>
+		</div>
+
+		<div style="clear:both">&nbsp;</div>
+
+		<div class="panel panel-default">
+		  <div class="panel-heading">
+		    <h3 class="panel-title">Step 3 : Logout</h3>
+		  </div>
+		  <div class="panel-body">
+		    <button id="logout" onclick="javascript:step2()"  type="button" class="btn btn-lg" disabled>Not Yet Logged In</button>
+		  </div>
+		</div>
+
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+            <div class="container-fluid footer-brand">
+                <div class="col-sm-4 col-sm-offset-8 col-xs-4 col-xs-offset-5">
+                    <div class="footer-logo-container">
+                        <span class="footer-tag">The Power to Surprise</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </footer>
+
+
+    <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  </body>
+</html>
