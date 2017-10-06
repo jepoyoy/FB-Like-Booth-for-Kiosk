@@ -5,12 +5,10 @@ var FbFeedModel = function() {
     this.latestDate = 0;
     this.fadeIn = function(domNode, index, element) {
             if (domNode.nodeType === 1){
-            	$(domNode).hide().css('opacity', 0)
-								  .slideDown('slow')
-								  .animate(
-								    { opacity: 1 },
-								    { queue: false, duration: 'slow' }
-								  );
+            	$(domNode).hide().fadeIn({
+                    duration: 2000,
+                    easing: "easeInQuad"
+                });
             }
         }
 };
